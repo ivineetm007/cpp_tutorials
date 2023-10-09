@@ -212,4 +212,18 @@ c++ -std=c++11 -o for_loop1.out for_loop1.cpp
 ./for_loop1.out
 ```
 
-## Range for loop
+#### Range for loop
+
+- Iterating over standard containers like `arrays` and `vectors`.
+- Use it when need to iterate over all elements.
+
+```
+# Sample code for range for loop- vector, string and strings
+c++ -std=c++11 -o for_loop2.out for_loop2.cpp
+./for_loop2.out
+```
+
+### Exit loops and iterations
+
+- break
+- continue
