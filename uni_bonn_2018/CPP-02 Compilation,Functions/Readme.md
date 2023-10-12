@@ -208,3 +208,44 @@ set_property(TARGET tools
 - `CMAKE_BUILD_TYPE`- `Release` or `Debug`. Not set by default.
 - Default Flags like `-Wall` or `-Wextra` in `CMAKE_CXX_FLAGS`
 - `CMAKE_CXX_FLAGS_DEBUG`- `-g -OO`, `CMAKE_CXX_FLAGS_RELEASE`- `-O3`
+
+### CMake hands-on
+
+- Bulding a empty project
+
+```
+# Sample project
+mkdir cmake_proj
+cd cmake_proj/
+touch CMakeLists.txt
+mkdir src
+# Edit CmakeLists.txt file,First build,  without any source code
+mkdir build
+cd build/
+# cmake will create a Makefile
+cmake ..
+# make will not do anything since we don't have any code
+make
+```
+
+- Add source code
+  - Update `CMakeLists` file to add subdirectory
+  - Add Cmake file in subdirectory
+  - Create a `main.cpp` and add it's existence in Cmake file inside `src`. On cmake build, we can see a `src` folder in build folder and `bin_main` executable inside `src`
+  - Add `hello.h` with a defition of a function and include it in main. Try to build again
+
+```
+rm -rf build/*
+cd src/
+touch CMakeLists.txt
+cd ../build
+cmake ..
+make
+```
+
+- Build with library
+  - Create new file `hello.cpp`, move the function declaration from `hello.h`
+  - Update cmake in `src` folder
+    - Add the library `add_library(hello hello.cpp)`
+    - Link `target_link_libraries(bin_main hello)`. For dynamic library, we can add `SHARED` keyword in between
+  - We can add more libraries and repeat the above steps.
