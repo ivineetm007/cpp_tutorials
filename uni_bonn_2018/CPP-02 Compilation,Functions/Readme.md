@@ -64,7 +64,7 @@ c++ -std=c++11 -Wall -o func4.out func4.cpp
 
 - Default parameters should be placed after the mandatory ones in the function declaration.
 - Only define it in decalaration.
-- **Pros**- Simplify fucntion calss
+- **Pros**- Simplify function calss
 - **Calls**-
   - Evaluated upon every call
   - Values are hidden in declaration
@@ -112,7 +112,7 @@ c++ -std=c++11 -Wall -o warn1.out warn1.cpp
 
 - `00` for no optimization, `03` for full optimizations
 
-One example was shwon in the lecture, the code contains a variable whose value is assigned as `square(20)`. While using optimization flag, the compiler automatically put value 400 instead of actually calling the function as runtime. The compiler can also remove functions that are not used or does not return something. Be careful, while debugging!!
+One example was shown in the lecture, the code contains a variable whose value is assigned as `square(20)`. While using optimization flag, the compiler automatically put value 400 instead of actually calling the function as runtime. The compiler can also remove functions that are not used or does not return something. Be careful, while debugging!!
 
 ## Debugging
 
