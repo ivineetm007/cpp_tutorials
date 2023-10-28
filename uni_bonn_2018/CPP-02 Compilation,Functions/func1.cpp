@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+// Returning reference which gets deleted after call and leds to Segmentation Fault
 int &Sum(int a, int b)
 {
     int c = a + b;
