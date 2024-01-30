@@ -128,7 +128,7 @@ Back element:3
 
 ## References
 
-- Use `&` to state that a variable is a reference. It is part of type. Herem `ref` has type `float&`
+- Use `&` to state that a variable is a reference. It is part of type. Here, `ref` has type `float&`
 
 ```
 float& ref = original_variable;
